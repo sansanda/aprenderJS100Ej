@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Página 2</title>
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+	var countries = ['Italia',
+					 'Francia',
+					 'Dinamarca',
+					 'Reino Unido',
+					 'Alemania',
+					 'Rusia',
+					 'Grecia',
+					 'China'
+					]; 
+	var bestCountry = prompt('¿Cuál es tu país favorito?','');					
+</script>
+</head>
+<body id="Areacentral">
+<div id="container">
+  <div id="cabecera"><img src="../images/banner.png" alt="Mi imagen" width="1000" height="86"></div>
+  <div id="contentWrap">
+    <div id="principal">
+      <h1>Países que he visitado</h1>
+      	<script type="text/javascript">
+      	if (bestCountry == 'Canadá') {
+          document.write("<p>¡Coincido contigo! Canadá también es mi país favorito</p>");
+        } else if (bestCountry == 'Argentina' || bestCountry == 'Portugal') {
+          document.write("<p>Aún no conozco " + bestCountry + ". Si vuelves algún día, avísame ;-)</p>");
+        } else {
+          document.write("<p>¡Sí! " + bestCountry + " también es muy bonito</p>"); 
+        }
+      	</script>
+      <p>¿Compartimos experiencias?</p>
+      	<script type="text/javascript">
+      	document.write('<p>El lugar más bonito es <em>');
+        document.write(countries[3] + '</em></p>');
+        document.write('<p>El lugar con más historia es <em>');
+        document.write(countries[0] + '</em></p>');
+        document.write('<p>El lugar que más me ha sorprendido es <em>');
+        document.write(countries[countries.length-1] + '</em></p>');
+        countries.unshift('Islandia'); //La lista tiene ahora 8 elementos 
+        document.write('<p>El lugar más frío es <em>');
+        document.write(countries[0] + '</em></p>');
+        countries.shift();
+        document.write('<p>El lugar más grande es <em>');
+        document.write(countries[4] + '</em></p>');
+        countries.pop();
+        document.write('<p>El lugar más fascinante es <em>');
+        document.write(countries[countries.length-1] + '</em></p>');
+        countries.splice(3,0, 'Austria', 'México', 'Panamá');
+        document.write('<p>El lugar más imperial es <em>');
+        document.write(countries[3] + '</em></p>');
+        countries.splice(6,1);
+        document.write('<p>El lugar en que más me he cansado es <em>');
+        document.write(countries[6] + '</em></p>');
+        countries.splice(1,2, 'Canadá', 'Egipto');
+        	/* 
+        	  En estos momentos
+        	  la lista cuenta con
+        	  9 países exactamente:
+        	  Islandia, Canadá, Egipto, Dinamarca, Alemania, Austria, México, Panamá y Grecia
+        	 */
+        document.write('<p>El lugar que más me ha impactado es <em>');
+        document.write(countries[1] + '</em></p>');
+        </script>
+    <p><a href="http://www.viajaporlibre.com/blog/">Mira este blog de viajeros</a></p>
+    </div>
+    <div id="lateral">
+      
+    </div>
+  </div>
+  <div id="pie"><em></em></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Página 2</title>
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+	var countries = ['Italia',
+					 'Francia',
+					 'Dinamarca',
+					 'Reino Unido',
+					 'Alemania',
+					 'Rusia',
+					 'Grecia',
+					 'China'
+					]; 					
+</script>
+</head>
+<body id="Areacentral">
+<div id="container">
+  <div id="cabecera"><img src="../images/banner.png" alt="Mi imagen" width="1000" height="86"></div>
+  <div id="contentWrap">
+    <div id="principal">
+      <h1>Países que he visitado</h1>
+      <p>¿Compartimos experiencias?</p>
+      	<script type="text/javascript">
+        document.write('<p>El lugar más bonito es <em>');
+        document.write(countries[3] + '</em></p>');
+        document.write('<p>El lugar con más historia es <em>');
+        document.write(countries[0] + '</em></p>');
+        document.write('<p>El lugar que más me ha sorprendido es <em>');
+        document.write(countries[countries.length-1] + '</em></p>');
+        countries.unshift('Islandia');
+        document.write('<p>El lugar más frío es <em>');
+        document.write(countries[0] + '</em></p>');
+        countries.shift();
+        document.write('<p>El lugar más grande es <em>');
+        document.write(countries[4] + '</em></p>');
+        countries.pop();
+        document.write('<p>El lugar más fascinante es <em>');
+        document.write(countries[countries.length-1] + '</em></p>');
+        </script>
+    </div>
+    <div id="lateral">
+      
+    </div>
+  </div>
+  <div id="pie"><em></em></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Página 1</title>
+  <link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <script src="../js/javascript.js"></script>
+  <script type="text/javascript">
+    function askQuestion(question){
+      return prompt(pregunta[0],"");
+    }
+  </script>
+  <script type="text/javascript">
+    var puntos = 0;
+    var preguntas = [ ["Cual es la capital de Austria?","Viena"],
+                      ["Cual es capital de Noruega?","Oslo"],
+                      ["Cual es la capital de Madagascar?","Malgache"],
+                      ["Como se llaman los habitantes de Panamá?","Panameños"]
+                    ];
+    /*for (var i=0;i<preguntas.length;i++)
+    {
+      pregunta = preguntas[i];
+      resp = askQuestion(pregunta[0]);
+      if (resp==pregunta[1]) {alert("Fantastico!!!. Sumas 10 puntos!!!!"); puntos += 10;}
+      else {alert("Lo siento. Prueba con la siguiente pregunta." + " La respuesta correcta era " + pregunta[1]);}
+    }
+
+    alert ("Has conseguido " + puntos + " puntos.");
+    */
+    var ua = navigator.userAgent;
+    alert(ua);
+    if (ua.indexOf("Chrome")!=-1){
+      alert("Esta utilizando Chrome!!!");
+    }
+    if (ua.indexOf("Firefox")!=-1){
+      alert("Esta utilizando Firefox!!!");
+    }
+    alert(Math.floor(Math.round(Number("5.49"))));
+  </script>
+</head>
+<body id="AreaCentral">
+<div id="container">
+  <div id="cabecera"><img src="../images/banner.png" width="1000" height="86" alt="Mi imagen"></div>
+  <div id="contentWrap">
+    <div id="principal">
+      <h1>Bienvenidos a mi sitio web</h1>
+      <script type="text/javascript">
+        //var nombre = prompt("introduce tu nombre"); 
+        //document.write("<p>Hola " +nombre+" </p>"); 
+      </script>
+    </div>
+    <div id="lateral">
+    </div>
+  </div>
+  <div id="pie">
+    <p> Hoy es <strong> <script> printToday();</script></strong></p>
+  </div>
+</div>
+</body>
+</html>

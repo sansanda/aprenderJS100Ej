@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Página 1</title>
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+	var name = prompt('Queremos conocerte. ¿Cómo te llamas?', '');
+	function printToday() {
+	var hoy = new Date(); document.write(hoy.getDate() + "/" + (hoy.getMonth() +1) + "/" + hoy.getFullYear());
+	}
+	
+	var puntos = 0;
+	var preguntas = [
+	 ['¿Cuál es la capital de Austria?', "Viena"],
+	 ['¿Cuál es la capital de Noruega?', "Oslo"],
+	 ['¿Qué lengua se habla en Madagascar?', "Malgache"],
+	 ['¿Cómo se llaman los habitantes de Panamá?', "Panameños"]
+	];
+	var aleatorio = Math.floor(Math.random() *preguntas.length);
+	var aleat = preguntas[aleatorio];
+	
+	function askQuestion(pregunta) {
+	 var respuesta = prompt(pregunta[0],'');
+	  if (respuesta == pregunta[1]) {
+	   alert('¡Correcto!');
+	   puntos++;
+	  } else {
+	   alert('Lo sentimos. La respuesta correcta es ' + pregunta[1]);
+	  } 
+	}
+	
+	for (var i=0; i<preguntas.length; i++) {
+	 askQuestion(aleat);
+	 aleatorio = Math.floor(Math.random() *preguntas.length);
+	 aleat = preguntas[aleatorio];
+	}
+</script>
+</head>
+<body id="Areacentral">
+<div id="container">
+  <div id="cabecera"><img src="../images/banner.png" alt="Mi imagen" width="1000" height="86"></div>
+  <div id="contentWrap">
+    <div id="principal">
+      <h1>Bienvenidos a mi sitio web</h1>
+       <script type="text/javascript">
+       document.write('<p>Encantado de volver a verte ' + name + '</p>	');
+       </script>
+      <p>
+      <script type="text/javascript">
+      var mensaje = 'Has contestado correctamente ' + puntos;
+      mensaje += ' de ' +preguntas.length;
+      mensaje += ' preguntas';
+      document.write(mensaje);
+      </script>
+      </p>
+    </div>
+    <div id="lateral">
+      
+    </div>
+  </div>
+  <div id="pie">
+  <p>Hoy es <strong><script type="text/javascript">printToday();
+  </script></strong></p></div>
+  <script type="text/javascript">
+      var nav = navigator.userAgent;
+      if(navigator.userAgent.indexOf('Firefox') !=-1) {
+	 	document.write('Está usando Firefox...');
+	  } else if(navigator.userAgent.indexOf('Chrome') !=-1) {
+	 	document.write('Está usando Google Chrome');
+	  }
+ </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+#galeria a {
+	padding:5px 5px 3px 5px;
+	border: 1px solid #e1953b;
+	display: block;
+	float: left;
+	margin: 0 10px 8px 0;
+	width: 70px;
+}
+
+#galeria img {
+	display:block;
+}
+
+#galeria {
+	width: 85px;
+	float: left;
+	padding: 0 10px 30px 20px;
+	
+}
+#galeriaderecha a {
+	padding: 5px 5px 3px 5px;
+	border: 1px solid #e1953b;
+	display: block;
+	float: right;
+	margin: 0 10px 8px 0;
+	width: 70px;
+}
+
+#galeriaderecha img {
+	display:block;
+}
+
+#galeriaderecha {
+	width: 85px;
+	float: right;
+	padding: 0 0 30px 30px;
+	
+}
+#foto {
+	width: 422px;
+	background: #FFF;
+	padding-right: 10px;
+	position: relative;
+}
+
+#foto img {
+	padding: 5px;
+	border: 1px solid #e1953b;
+	position: absolute;
+	background-color:white;
+}

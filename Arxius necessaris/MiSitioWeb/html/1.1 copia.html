@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Página 1</title>
+<link href="../css/global.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+    var puntos = 0;
+	var preguntas = [
+	 ['¿Cuál es la capital de Austria?', Viena],
+	 ['¿Cuál es la capital de Noruega?', Oslo],
+	 ['¿Qué lengua se habla en Madagascar?', Malgache],
+	 ['¿Cómo se llaman los habitantes de Panamá?', Panameños] 
+	];
+	function askQuestion(pregunta) {
+	 var resp = prompt(pregunta[0],'');
+	  if (resp == pregunta[1]) {
+	   alert('¡Correcto!');
+	   puntos++;
+	  } else {
+	   alert('Lo sentimos. La respuesta correcta es ' + pregunta[1]);
+	  } 
+	}
+	for (var i=0; i<preguntas.length; i++) {
+	 askQuestion(preguntas[i]);
+	}
+</script>
+</head>
+<body id="twoCol">
+<div id="container">
+  <div id="banner"><img src="../images/banner.png" width="1000" height="86"></div>
+  <div id="contentWrap">
+    <div id="main">
+      <h1>Bienvenidos a mi sitio web</h1>
+    </div>
+    <div id="sidebar">
+      
+    </div>
+  </div>
+  <div id="footer">
+  </div>
+</div>
+</body>
+</html>

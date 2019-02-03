@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Página 1</title>
+  <link href="../css/estilos.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="../js/javascript.js"></script>
+  
+</head>
+<body id="AreaCentral">
+<div id="container">
+  <div id="cabecera"><img src="../images/banner.png" width="1000" height="86" alt="Mi imagen"></div>
+  <div id="contentWrap">
+    <div id="principal">
+      <h1>Bienvenidos a mi sitio web</h1>
+    </div>
+    <p>
+      <script>
+        var hoy = new Date();
+        var horas = hoy.getHours();
+        if (horas<10) horas = '0' + horas;
+        var minutos = hoy.getMinutes();
+        if (minutos<10) minutos = '0' + minutos;
+        var segundos = hoy.getSeconds();
+        if (segundos<10) segundos = '0' + segundos;
+        var textoFecha = fechaCompleta(hoy,"#DIASEMANA#,#dia# de #MES# de #YEAR#");
+        document.write(textoFecha);
+      </script>
+    </p>
+    <div id="lateral">
+    </div>
+  </div>
+  <div id="pie">
+    <script>
+        document.write(horas + ':' + minutos + ':' + segundos );
+      </script>  
+  </div>
+</div>
+</body>
+</html>

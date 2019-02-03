@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Página 6</title>
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+#principal h1 {
+	font: bold 30px "Trebuchet MS", Arial, sans-serif;
+	color: #050;
+	border-bottom: 1px;
+	margin-top:15px;
+  text-transform:uppercase;
+	position:relative
+}
+.efecto {
+position: absolute;
+width: 100%;
+display: block;
+height:40px;
+background: url(fondoletras.png) repeat;
+}
+.enfasis {
+	float: right;
+	width: 140px;
+	border: 0.5px;
+	padding: 10px;
+	font-size: 15px;
+	background-color:#d0e5f6;
+	margin: 10px 10px 5px 0;
+	font-style: bold;
+	color: #050;
+}
+#principal .texto {
+  background-color: white;
+}
+</style>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript">
+ $(document).ready(function() {
+  $('#principal h1').prepend('<span class="efecto"></span>');
+ });
+</script>
+<script type="text/javascript">
+ 
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+ $('span.enf').each(function() {
+  var cita=$(this).clone();
+   cita.removeClass('enf');
+   cita.addClass('enfasis');
+   $(this).before(cita);
+ });
+});
+</script>
+<script type="text/javascript">
+ $(document).ready(function() {
+  $('.texto').hide();
+  $('#principal h2').hover(
+    function() {
+	  $(this).next('.texto').fadeIn('fast');
+	},
+	function() {
+	  $(this).next('.texto').fadeOut('fast');
+	}
+  );
+ });
+</script>
+<script type="text/javascript">
+ var sobre = new Image();
+ sobre.src = '../images/foto2.jpg';
+ $(document).ready(function() {
+  var imagenOriginal=$('#foto img').attr('src');
+   $('h1').hover(
+    function() {
+     $('#foto img').attr('src', sobre.src).fadeOut('slow');
+    },
+    function() {
+     $('#foto img').attr('src', imagenOriginal).fadeIn('slow');
+    }); 
+ });
+</script> 
+<script type="text/javascript">
+ 
+</script>
+</head>
+<body id="Areacentral">
+<div id="container">
+  <div id="cabecera"><img src="../images/banner.png" alt="Mi imagen" width="1000" height="86"></div>
+  <div id="contentWrap">
+    <div id="principal">
+      <h1>Bienvenidos a mi sitio web</h1>
+      <div id="foto">
+      <img src="../images/foto1.jpg" width="70" height="105" alt="Foto 1">
+      </div>
+      <h2>Quién soy</h2>
+      <div class="texto">
+      <p>Mi pasión por la lectura y la escritura me ha llevado a trabajar siempre en lo que más me gusta: traducción, redacción, corrección y maquetación de textos de todo tipo.
+	  <span class="enf">Mi intención es ayudar con mi trabajo a aquellos que lo necesiten facilitando la edición </span> y la presentación de sus documentos.
+	  Seguidamente podrás conocerme mejor profesionalmente y ver todo lo que he hecho hasta ahora. <p>
+	  <p> Además de documentos y textos de diferentes temáticas, <span class="enf">he traducido un gran número de libros para distintas editoriales.</span>
+	  La traducción (y subtitulación) de guiones cinematográficos para productoras audiovisuales es una de las tareas más creativas que he llevado a cabo.<p>
+	  </div>
+	  <h2>Qué hago</h2>
+	 <div class="texto">
+	 <p><span class="enf">Mi pasión por la lectura y la escritura me ha llevado a trabajar siempre en lo que más me gusta</span>: traducción, redacción, corrección y maquetación de textos de todo tipo.
+     Mi intención es ayudar con mi trabajo a aquellos que lo necesiten facilitando la edición y la presentación de sus documentos.
+    Seguidamente podrás conocerme mejor profesionalmente y ver todo lo que he hecho hasta ahora. <p>
+   <p> Además de documentos y textos de diferentes temáticas, he traducido un gran número de libros para distintas editoriales.
+   La traducción (y subtitulación) de guiones cinematográficos para productoras audiovisuales es una de las tareas más creativas que he llevado a cabo.<p>
+   </div>
+   </div>
+    <div id="lateral">
+      
+    </div>
+  </div>
+  <div id="pie">
+    <div id="imagenPie">
+    <img src="../images/pies.jpg" width="70" height="60" alt="Zapatillas">
+    </div>
+  </div>
+</body>
+</html>

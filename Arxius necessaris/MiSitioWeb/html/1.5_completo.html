@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Página 5</title>
+<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+function fechaCompleta(fecha,formato) {
+ var diaSemana=fecha.getDay()-1;
+   if (diaSemana <0){
+		diaSemana=6
+	}
+ var dias = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+ var nombreDia=dias[diaSemana];
+ var dia=fecha.getDate();
+ var diaDosDigitos=dia;
+	if (dia<10) {
+  		diaDosDigitos = '0' + dia;
+	}
+ var mes=fecha.getMonth();
+ var mesActual=mes+1;
+ var meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto',
+'septiembre', 'octubre', 'noviembre', 'diciembre'];
+ var nombreMes=meses[mes];
+ var year=fecha.getFullYear();
+ formato=formato.replace(/#DIASEMANA#/g,nombreDia);
+ formato=formato.replace(/#diasemana#/g,nombreDia.slice(0,3));
+ formato=formato.replace(/#DIA#/g,dia);
+ formato=formato.replace(/#dia#/g,diaDosDigitos);
+ formato=formato.replace(/#MESES#/g,nombreMes);
+ formato=formato.replace(/#meses#/g,nombreMes.slice(0,3));
+ formato=formato.replace(/#MES#/g,nombreMes);
+ formato=formato.replace(/#YEAR#/g,year);
+ formato=formato.replace(/#year#/g,year.toString().slice(-2));
+ return formato; 	
+}					
+</script>
+</head>
+<body id="Areacentral">
+<div id="container">
+  <div id="cabecera"><img src="../images/banner.png" alt="Mi imagen" width="1000" height="86"></div>
+  <div id="contentWrap">
+    <div id="principal">
+      <h1>Algunos cálculos</h1>
+       	<p><script type="text/javascript">
+       	 var hoy = new Date();
+      	 var textoFecha = fechaCompleta(hoy, '#DIASEMANA#, #DIA# de #MES# de #YEAR#');
+      	 document.write(textoFecha);
+       	</script></p>
+       	<script type="text/javascript">
+      	var valor1 = '5';
+      	var valor2 = '8';
+      	document.write(Number(valor1) + Number(valor2));
+      	</script>
+     </div>
+    <div id="lateral">
+      
+    </div>
+  </div>
+  <div id="pie">
+  <script type="text/javascript">
+  var hora = new Date();
+  var horas = hora.getHours();
+   if (horas<12) {
+    formatoHora = 'am';
+   } else {
+    formatoHora = 'pm';
+   } 
+   horas = horas % 12;
+    if (horas==0) {
+     horas = 12;
+    }
+  var min = hora.getMinutes();
+   if (min<10) {
+     min = '0' + min;
+   }
+  var seg = hora.getSeconds();
+   if (seg<10) {
+     seg = '0' + seg;
+    }
+  document.write("Hora actual: " + horas + ":" + min + ' ' +  formatoHora);
+  </script>
+  </div>
+</div>
+</body>
+</html>
