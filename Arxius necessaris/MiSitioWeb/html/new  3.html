@@ -20,48 +20,16 @@ display: block;
 height:40px;
 background: url("../images/fondoletras.png") repeat;
 }
-.enfasis {
-float: left;
-width: 140px;
-border: 0.5px;
-padding: 10px;
-font-size: 15px;
-background-color: #d0e5f6;
-margin: 10px 10px 5px 0;
-font-style: bold;
-color: #050;
-}
 </style>
-<script
-src="https://code.jquery.com/jquery-3.3.1.js"
-integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-crossorigin="anonymous"></script>
-<script type="text/javascript">
- $(document).ready(function() {
-  //$('#principal h1').prepend('<span class="efecto"></span>');
-  $("span.enf").each(function(){
-      var cita = $(this).clone();
-      cita.removeClass("enf");
-      cita.addClass("enfasis");
-      $(this).before(cita);
-      $(this).remove();
-    }  
-  );
-  $("#pepe").click(function(){
-    $(this).remove();  
-  });
- });
-</script>
 </head>
 <body id="Areacentral">
 <div id="container">
   <div id="cabecera"><img src="../images/banner.png" alt="Mi imagen" width="1000" height="86"></div>
   <div id="contentWrap">
     <div id="principal">
-      <span class="enf"> hola</span>
-      <h1 id="pepe">Bienvenidos a mi sitio web</h1>
+      <h1><span class="efecto"></span>Bienvendddddidos a mi sitio web</h1>
       <p>Mi pasión por la lectura y la escritura me ha llevado a trabajar siempre en lo que más me gusta: traducción, redacción, corrección y maquetación de textos de todo tipo.
-	  <span class="enf">Mi intención es ayudar con mi trabajo a aquellos que lo necesiten facilitando la edición </span> y la presentación de sus documentos.
+	  Mi intención es ayudar con mi trabajo a aquellos que lo necesiten facilitando la edición y la presentación de sus documentos.
 	  Seguidamente podrás conocerme mejor profesionalmente y ver todo lo que he hecho hasta ahora. <p>
 	  <p> Además de documentos y textos de diferentes temáticas, he traducido un gran número de libros para distintas editoriales.
 	  La traducción (y subtitulación) de guiones cinematográficos para productoras audiovisuales es una de las tareas más creativas que he llevado a cabo.<p>

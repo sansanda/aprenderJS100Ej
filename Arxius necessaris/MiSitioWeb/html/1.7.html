@@ -46,6 +46,12 @@ td {
 	padding: 3px;
 	font-size: 1.3em;
 }
+.coloralt{
+  background-color:red;
+}
+.cambioColor{
+  background-color:yellow;
+}
 </style>
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script type="text/javascript">
@@ -54,7 +60,17 @@ td {
  });
 </script>
 <script type="text/javascript">
-
+$(document).ready(function(){
+  $('table.striped tr:even').addClass('coloralt');
+  $('table.striped tr:even').mouseover(function(){
+    $(this).addClass("cambioColor");  
+  });
+  $('table.striped tr:even').mouseleave(function(){
+    $(this).removeClass("cambioColor");
+  });
+      
+}
+);
 </script>
 </head>
 <body id="Areacentral">
