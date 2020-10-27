@@ -42,7 +42,11 @@ background: url(fondoletras.png) repeat;
  });
 </script>
 <script type="text/javascript">
- 
+  $(document).ready(function(){
+    $("#pie").mouseover(function(){
+      $("#imagenPie img").animate({opacity: .5},1000);  
+    });  
+  });
 </script>
 <script type="text/javascript">
 $(document).ready(function() {
@@ -78,6 +82,7 @@ $(document).ready(function() {
     },
     function() {
      $('#foto img').attr('src', imagenOriginal).fadeIn('slow');
+     
     }); 
  });
 </script> 
@@ -117,7 +122,7 @@ $(document).ready(function() {
   </div>
   <div id="pie">
     <div id="imagenPie">
-    <img src="../images/pies.jpg" width="70" height="60" alt="Zapatillas">
+      <img src="../images/pies.jpg" width="70" height="60" alt="Zapatillas">
     </div>
   </div>
 </body>

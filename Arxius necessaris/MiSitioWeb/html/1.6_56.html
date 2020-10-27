@@ -64,6 +64,28 @@ $(document).ready(function() {
   );
  });
 </script>
+
+<script type="text/javascript">
+  var img1= new Image();
+  var img2= new Image();
+  img1.src="../images/foto1.jpg";
+  img2.src="../images/foto2.jpg";
+
+  $(document).ready(function(){
+    $("h1").hover(function(){
+      //$("#foto img").fadeOut("slow");
+      $("#foto img").attr("src",img2.src).hide();
+      $("#foto img").fadeIn("slow");
+      
+
+    },function(){
+      $("#foto img").attr("src",img1.src).hide();
+      $("#foto img").fadeIn("slow");
+      
+    }
+    );
+  });
+</script>
 </head>
 <body id="Areacentral">
 <div id="container">
